@@ -719,3 +719,62 @@ body{
   border-radius:20px;
 }
 
+
+/* FINAL GRID OVERRIDE — 4 APPS PER ROW */
+.bookmark-grid{
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  grid-template-rows:repeat(8,auto) !important;
+}
+
+@media(max-width:980px){
+  .bookmark-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  }
+}
+
+@media(max-width:680px){
+  .bookmark-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+    gap:22px 8px !important;
+    max-width:100% !important;
+    padding-left:4px !important;
+    padding-right:4px !important;
+  }
+
+  .bookmark-card{
+    max-width:82px !important;
+  }
+
+  .bookmark-icon-wrap{
+    width:72px !important;
+    height:72px !important;
+    border-radius:20px !important;
+  }
+
+  .bookmark-icon-wrap img{
+    width:48px !important;
+    height:48px !important;
+  }
+}
+
+@media(max-width:400px){
+  .bookmark-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+    gap:18px 5px !important;
+  }
+
+  .bookmark-card{
+    max-width:72px !important;
+  }
+
+  .bookmark-icon-wrap{
+    width:64px !important;
+    height:64px !important;
+  }
+
+  .bookmark-icon-wrap img{
+    width:43px !important;
+    height:43px !important;
+  }
+}
+
