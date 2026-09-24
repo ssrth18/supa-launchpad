@@ -778,3 +778,55 @@ body{
   }
 }
 
+
+/* RESPONSIVE CUSTOMIZATION — settings control the actual launcher */
+.bookmark-grid{
+  grid-template-rows:repeat(var(--launcher-rows, 8),minmax(0,auto)) !important;
+}
+
+.bookmark-card{
+  max-width:var(--icon-tile-size,118px) !important;
+  width:100% !important;
+}
+
+.bookmark-icon-wrap{
+  width:var(--icon-tile-size,118px) !important;
+  height:var(--icon-tile-size,118px) !important;
+  border-radius:var(--radius,26px) !important;
+}
+
+.bookmark-icon-wrap img{
+  width:var(--bookmark-icon-size,76px) !important;
+  height:var(--bookmark-icon-size,76px) !important;
+}
+
+@media(max-width:680px){
+  .bookmark-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+    grid-template-rows:repeat(var(--launcher-rows,8),minmax(0,auto)) !important;
+    gap:var(--launcher-gap,18px) !important;
+    max-width:100% !important;
+  }
+
+  .bookmark-card{
+    max-width:var(--icon-tile-size,82px) !important;
+  }
+
+  .bookmark-icon-wrap{
+    width:var(--icon-tile-size,82px) !important;
+    height:var(--icon-tile-size,82px) !important;
+    border-radius:var(--radius,20px) !important;
+  }
+
+  .bookmark-icon-wrap img{
+    width:var(--bookmark-icon-size,54px) !important;
+    height:var(--bookmark-icon-size,54px) !important;
+  }
+}
+
+@media(max-width:400px){
+  .bookmark-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+    gap:var(--launcher-gap,14px) !important;
+  }
+}
