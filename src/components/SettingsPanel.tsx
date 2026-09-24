@@ -32,7 +32,7 @@ export function SettingsPanel({
     onChange({...settings,grid:{...g,[key]:value} as typeof g})
 
   const setLayout=(value:string)=>{
-    const sizes={
+    const sizes:Record<string,{iconSize:number;tileSize:number;gap:number}>={
       compact:{iconSize:48,tileSize:68,gap:12},
       balanced:{iconSize:56,tileSize:82,gap:18},
       spacious:{iconSize:64,tileSize:94,gap:22}
@@ -110,7 +110,7 @@ export function SettingsPanel({
                     theme:{
                       ...t,
                       preset:p,
-                      ...presets[p]
+                      ...presets[p as keyof typeof presets]
                     }
                   })
                 }
