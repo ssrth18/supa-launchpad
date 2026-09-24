@@ -132,3 +132,275 @@ button,input,select{font:inherit}button{color:inherit}
   .bookmark-icon-wrap{width:100px;height:100px;border-radius:24px}
   .bookmark-icon-wrap img{width:64px;height:64px}
 }
+
+/* ===== NEXUS VISUAL THEME ===== */
+
+:root{
+  --nexus-cyan:#00d9ff;
+  --nexus-cyan-soft:#00bde8;
+  --nexus-bg:#030509;
+  --nexus-panel:#070b12;
+  --nexus-tile:#080d15;
+  --nexus-border:rgba(0,217,255,.16);
+  --nexus-text:#e8f7ff;
+  --nexus-muted:#667784;
+}
+
+html,body{
+  background:#030509 !important;
+  color:var(--nexus-text) !important;
+}
+
+body{
+  background:
+    radial-gradient(circle at 50% -10%,rgba(0,217,255,.075),transparent 35%),
+    radial-gradient(circle at 100% 100%,rgba(0,120,180,.055),transparent 38%),
+    #030509 !important;
+}
+
+.app-shell{
+  background:transparent !important;
+}
+
+.ambient{
+  opacity:.18 !important;
+  filter:blur(100px) !important;
+}
+
+.ambient-one{
+  background:rgba(0,217,255,.16) !important;
+}
+
+.ambient-two{
+  background:rgba(0,100,180,.12) !important;
+}
+
+/* Header */
+
+header{
+  background:rgba(3,5,9,.88) !important;
+  border-color:rgba(0,217,255,.10) !important;
+  box-shadow:0 1px 30px rgba(0,0,0,.35) !important;
+  backdrop-filter:blur(22px) !important;
+}
+
+.searchbox,
+.header-button,
+.header-actions button{
+  background:rgba(6,11,17,.82) !important;
+  border-color:rgba(0,217,255,.16) !important;
+  box-shadow:none !important;
+}
+
+.searchbox:focus-within{
+  border-color:rgba(0,217,255,.55) !important;
+  box-shadow:0 0 24px rgba(0,217,255,.08) !important;
+}
+
+.searchbox svg,
+.header-button svg,
+.header-actions svg{
+  color:var(--nexus-cyan) !important;
+}
+
+.searchbox input{
+  color:#dff8ff !important;
+}
+
+.searchbox input::placeholder{
+  color:#50616d !important;
+}
+
+/* Main heading */
+
+.workspace-head h1{
+  color:#eafaff !important;
+  letter-spacing:.02em !important;
+}
+
+.eyebrow{
+  color:var(--nexus-cyan) !important;
+  letter-spacing:.24em !important;
+  text-transform:uppercase !important;
+}
+
+.workspace-head p{
+  color:#52636e !important;
+}
+
+.sync-pill{
+  background:rgba(0,217,255,.045) !important;
+  border-color:rgba(0,217,255,.13) !important;
+  color:#5d8a99 !important;
+}
+
+/* Bookmark tiles */
+
+.bookmark-card{
+  background:transparent !important;
+  box-shadow:none !important;
+}
+
+.bookmark-main{
+  background:transparent !important;
+}
+
+.bookmark-icon-wrap{
+  background:
+    linear-gradient(145deg,rgba(10,18,27,.98),rgba(4,8,13,.98)) !important;
+  border:1px solid rgba(0,217,255,.13) !important;
+  box-shadow:
+    0 8px 28px rgba(0,0,0,.45),
+    inset 0 0 24px rgba(0,217,255,.025) !important;
+  transition:
+    transform .22s ease,
+    border-color .22s ease,
+    box-shadow .22s ease !important;
+}
+
+.bookmark-card:hover .bookmark-icon-wrap{
+  border-color:rgba(0,217,255,.48) !important;
+  box-shadow:
+    0 10px 34px rgba(0,0,0,.55),
+    0 0 24px rgba(0,217,255,.08),
+    inset 0 0 22px rgba(0,217,255,.035) !important;
+}
+
+.bookmark-card:active .bookmark-icon-wrap{
+  transform:scale(.94) !important;
+}
+
+.bookmark-copy strong{
+  color:#d9f5ff !important;
+}
+
+.bookmark-copy span{
+  color:#4d626d !important;
+}
+
+.fallback-letter{
+  color:var(--nexus-cyan) !important;
+}
+
+.open-indicator{
+  color:#526a75 !important;
+}
+
+.bookmark-menu{
+  background:#060b11 !important;
+  border-color:rgba(0,217,255,.18) !important;
+  color:#72909b !important;
+}
+
+.bookmark-menu:hover{
+  color:var(--nexus-cyan) !important;
+  border-color:rgba(0,217,255,.5) !important;
+}
+
+/* Buttons */
+
+.primary-button{
+  background:var(--nexus-cyan) !important;
+  color:#001016 !important;
+  border-color:var(--nexus-cyan) !important;
+  box-shadow:0 0 22px rgba(0,217,255,.14) !important;
+}
+
+.primary-button:hover{
+  background:#63e8ff !important;
+}
+
+/* Empty state */
+
+.empty-state{
+  color:#dff8ff !important;
+}
+
+.empty-icon{
+  color:var(--nexus-cyan) !important;
+  background:rgba(0,217,255,.04) !important;
+  border-color:rgba(0,217,255,.16) !important;
+}
+
+/* Panels / modal */
+
+.settings-panel,
+.modal,
+.modal-content{
+  background:#060a10 !important;
+  border-color:rgba(0,217,255,.14) !important;
+  box-shadow:0 24px 80px rgba(0,0,0,.7) !important;
+}
+
+.settings-panel h2,
+.modal h2{
+  color:#e7faff !important;
+}
+
+.settings-panel label,
+.modal label{
+  color:#718691 !important;
+}
+
+input,
+select,
+textarea{
+  background:#04080d !important;
+  border-color:rgba(0,217,255,.13) !important;
+  color:#e5f8ff !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:rgba(0,217,255,.48) !important;
+  box-shadow:0 0 18px rgba(0,217,255,.07) !important;
+}
+
+/* Toast */
+
+.toast{
+  background:#071018 !important;
+  border-color:rgba(0,217,255,.24) !important;
+  color:#cceff8 !important;
+  box-shadow:0 12px 40px rgba(0,0,0,.6) !important;
+}
+
+/* Thin futuristic scrollbar */
+
+*{
+  scrollbar-color:rgba(0,217,255,.28) transparent !important;
+}
+
+*::-webkit-scrollbar{
+  width:5px;
+  height:5px;
+}
+
+*::-webkit-scrollbar-track{
+  background:transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+  background:rgba(0,217,255,.25);
+  border-radius:99px;
+}
+
+/* Mobile: keep the clean NEXUS proportions */
+
+@media(max-width:680px){
+  .bookmark-icon-wrap{
+    box-shadow:
+      0 7px 24px rgba(0,0,0,.5),
+      inset 0 0 20px rgba(0,217,255,.025) !important;
+  }
+
+  .bookmark-copy{
+    display:none !important;
+  }
+
+  .open-indicator{
+    display:none !important;
+  }
+}
+
