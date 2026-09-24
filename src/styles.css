@@ -404,3 +404,318 @@ textarea:focus{
   }
 }
 
+
+/* ===== NEXUS / OLED FUTURISTIC UI ===== */
+
+:root{
+  --bg:#030508;
+  --panel:#060a0f;
+  --tile:#080d13;
+  --text:#e8faff;
+  --muted:#60717b;
+  --accent:#00d9ff;
+  --border:rgba(0,217,255,.13);
+}
+
+/* Base */
+html,body,#root{
+  background:#030508 !important;
+}
+
+body{
+  color:#e8faff !important;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+
+.app-shell{
+  background:
+    radial-gradient(circle at 50% -15%,rgba(0,217,255,.065),transparent 38%),
+    radial-gradient(circle at 100% 100%,rgba(0,130,190,.045),transparent 34%),
+    #030508 !important;
+}
+
+/* Atmosphere */
+.ambient{
+  opacity:.12 !important;
+  filter:blur(130px) !important;
+}
+
+.ambient-one{
+  background:#00d9ff !important;
+}
+
+.ambient-two{
+  background:#006b99 !important;
+}
+
+/* Header */
+.topbar{
+  min-height:68px !important;
+  padding:10px 18px !important;
+  background:rgba(3,5,8,.82) !important;
+  border-bottom:1px solid rgba(0,217,255,.09) !important;
+  backdrop-filter:blur(24px) !important;
+  -webkit-backdrop-filter:blur(24px) !important;
+}
+
+.logo-mark{
+  background:#071219 !important;
+  color:#00d9ff !important;
+  border:1px solid rgba(0,217,255,.28) !important;
+  box-shadow:0 0 24px rgba(0,217,255,.07) !important;
+}
+
+.searchbox{
+  background:rgba(5,10,15,.88) !important;
+  border:1px solid rgba(0,217,255,.13) !important;
+  border-radius:14px !important;
+  box-shadow:none !important;
+}
+
+.searchbox:focus-within{
+  border-color:rgba(0,217,255,.45) !important;
+  box-shadow:0 0 0 3px rgba(0,217,255,.035) !important;
+}
+
+.searchbox input{
+  color:#dff9ff !important;
+}
+
+.searchbox input::placeholder{
+  color:#50616a !important;
+}
+
+.top-actions{
+  gap:7px !important;
+}
+
+.icon-button,
+.header-action{
+  background:#060b10 !important;
+  border:1px solid rgba(0,217,255,.12) !important;
+  color:#66808b !important;
+  border-radius:11px !important;
+}
+
+.icon-button:hover,
+.header-action:hover{
+  color:#00d9ff !important;
+  border-color:rgba(0,217,255,.4) !important;
+  background:#071219 !important;
+}
+
+/* Main */
+.workspace{
+  max-width:1120px !important;
+  padding-top:30px !important;
+}
+
+.eyebrow{
+  color:#00d9ff !important;
+  letter-spacing:.28em !important;
+}
+
+.workspace-head h1{
+  color:#eafaff !important;
+  font-weight:600 !important;
+  letter-spacing:-.025em !important;
+}
+
+.workspace-head p{
+  color:#52636d !important;
+}
+
+.sync-pill{
+  background:rgba(0,217,255,.025) !important;
+  border:1px solid rgba(0,217,255,.11) !important;
+  color:#57717c !important;
+}
+
+/* Launcher */
+.bookmark-grid{
+  max-width:760px !important;
+  padding-top:22px !important;
+}
+
+.bookmark-card{
+  max-width:150px !important;
+}
+
+.bookmark-card:hover{
+  transform:translateY(-3px) scale(1.015) !important;
+  filter:none !important;
+}
+
+/* Icon tile */
+.bookmark-icon-wrap{
+  background:
+    linear-gradient(145deg,#0a1118,#05090e) !important;
+  border:1px solid rgba(0,217,255,.13) !important;
+  border-radius:25px !important;
+  box-shadow:
+    0 14px 32px rgba(0,0,0,.52),
+    inset 0 1px 0 rgba(255,255,255,.035) !important;
+}
+
+.bookmark-card:hover .bookmark-icon-wrap{
+  border-color:rgba(0,217,255,.42) !important;
+  box-shadow:
+    0 17px 36px rgba(0,0,0,.58),
+    0 0 25px rgba(0,217,255,.055),
+    inset 0 1px 0 rgba(255,255,255,.05) !important;
+}
+
+.bookmark-card::before{
+  background:#00d9ff !important;
+  filter:blur(42px) !important;
+  opacity:0 !important;
+}
+
+.bookmark-card:hover::before{
+  opacity:.07 !important;
+}
+
+.fallback-letter{
+  color:#00d9ff !important;
+}
+
+.bookmark-menu{
+  background:#050a0f !important;
+  border-color:rgba(0,217,255,.16) !important;
+  color:#637984 !important;
+}
+
+.bookmark-menu:hover{
+  color:#00d9ff !important;
+  border-color:rgba(0,217,255,.42) !important;
+}
+
+/* Empty screen */
+.empty-state{
+  background:rgba(5,9,14,.35) !important;
+  border-color:rgba(0,217,255,.12) !important;
+}
+
+.empty-icon{
+  background:#071017 !important;
+  border-color:rgba(0,217,255,.18) !important;
+  color:#00d9ff !important;
+}
+
+/* Buttons */
+.primary-button{
+  background:#00d9ff !important;
+  color:#001016 !important;
+  border-color:#00d9ff !important;
+  box-shadow:0 0 25px rgba(0,217,255,.10) !important;
+}
+
+.primary-button:hover{
+  background:#58e7ff !important;
+}
+
+/* Modal */
+.modal-backdrop{
+  background:rgba(0,2,5,.78) !important;
+  backdrop-filter:blur(16px) !important;
+}
+
+.settings-panel,
+.bookmark-modal{
+  background:#060b10 !important;
+  border:1px solid rgba(0,217,255,.14) !important;
+  box-shadow:0 30px 100px rgba(0,0,0,.72) !important;
+}
+
+.modal-head h2{
+  color:#e8faff !important;
+}
+
+.settings-section{
+  border-color:rgba(0,217,255,.08) !important;
+}
+
+.field input,
+.field select{
+  background:#03080c !important;
+  border-color:rgba(0,217,255,.12) !important;
+}
+
+.field input:focus,
+.field select:focus{
+  border-color:rgba(0,217,255,.42) !important;
+}
+
+.secondary-button{
+  background:#081016 !important;
+  border-color:rgba(0,217,255,.14) !important;
+}
+
+/* Toast */
+.toast{
+  background:#071117 !important;
+  border-color:rgba(0,217,255,.2) !important;
+  color:#cdeff7 !important;
+}
+
+/* Mobile */
+@media(max-width:680px){
+  .topbar{
+    min-height:62px !important;
+    padding:8px 10px !important;
+  }
+
+  .bookmark-grid{
+    max-width:430px !important;
+    padding-left:4px !important;
+    padding-right:4px !important;
+  }
+
+  .bookmark-card{
+    max-width:96px !important;
+  }
+
+  .bookmark-icon-wrap{
+    width:82px !important;
+    height:82px !important;
+    border-radius:22px !important;
+  }
+
+  .bookmark-icon-wrap img{
+    width:54px !important;
+    height:54px !important;
+  }
+}
+
+@media(max-width:400px){
+  .bookmark-card{
+    max-width:82px !important;
+  }
+
+  .bookmark-icon-wrap{
+    width:72px !important;
+    height:72px !important;
+    border-radius:20px !important;
+  }
+
+  .bookmark-icon-wrap img{
+    width:48px !important;
+    height:48px !important;
+  }
+}
+
+/* OLED scrollbar */
+*{
+  scrollbar-color:rgba(0,217,255,.22) transparent !important;
+}
+
+*::-webkit-scrollbar{
+  width:4px;
+  height:4px;
+}
+
+*::-webkit-scrollbar-thumb{
+  background:rgba(0,217,255,.22);
+  border-radius:20px;
+}
+
