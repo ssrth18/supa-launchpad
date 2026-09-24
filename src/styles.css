@@ -830,3 +830,88 @@ body{
     gap:var(--launcher-gap,14px) !important;
   }
 }
+
+
+/* FINAL RESPONSIVE LAUNCHER */
+.bookmark-grid{
+  width:min(100%,760px) !important;
+  max-width:760px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:clamp(10px,2.8vw,var(--launcher-gap,18px)) !important;
+  padding:18px 4px 48px !important;
+}
+
+.bookmark-card{
+  width:100% !important;
+  max-width:none !important;
+  aspect-ratio:1 !important;
+}
+
+.bookmark-icon-wrap{
+  width:min(var(--launcher-tile,82px),100%) !important;
+  height:min(var(--launcher-tile,82px),100%) !important;
+  aspect-ratio:1 !important;
+}
+
+.bookmark-icon-wrap img{
+  width:min(var(--launcher-icon,56px),calc(var(--launcher-tile,82px) - 18px)) !important;
+  height:min(var(--launcher-icon,56px),calc(var(--launcher-tile,82px) - 18px)) !important;
+}
+
+.settings-hint{
+  margin:10px 0 0;
+  color:#52636d;
+  font-size:10px;
+  line-height:1.5;
+}
+
+@media(max-width:680px){
+  .workspace{
+    padding-left:8px !important;
+    padding-right:8px !important;
+  }
+
+  .bookmark-grid{
+    width:100% !important;
+    max-width:480px !important;
+    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+    gap:clamp(8px,3.5vw,var(--launcher-gap,18px)) !important;
+    padding:14px 2px 40px !important;
+  }
+
+  .bookmark-card{
+    min-width:0 !important;
+  }
+
+  .bookmark-icon-wrap{
+    width:min(var(--launcher-tile,82px),calc(25vw - 12px)) !important;
+    height:min(var(--launcher-tile,82px),calc(25vw - 12px)) !important;
+  }
+
+  .bookmark-icon-wrap img{
+    width:min(var(--launcher-icon,56px),calc(25vw - 28px)) !important;
+    height:min(var(--launcher-icon,56px),calc(25vw - 28px)) !important;
+  }
+
+  .settings-panel{
+    width:calc(100vw - 20px) !important;
+    max-height:88vh !important;
+    overflow-y:auto !important;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  .field.full{
+    grid-column:auto !important;
+  }
+}
+
+@media(max-width:400px){
+  .bookmark-grid{
+    gap:8px !important;
+  }
+}
