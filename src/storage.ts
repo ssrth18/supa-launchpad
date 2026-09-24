@@ -1,0 +1,6 @@
+import type { Bookmark, Settings } from './types'
+const DB='supa-launchpad-db', VERSION=1
+function openDB(){return new Promise<IDBDatabase>((resolve,reject)=>{const req=indexedDB.open(DB,VERSION);req.onupgradeneeded=()=>{const d=req.result;['bookmarks','settings'].forEach(n=>{if(!d.objectStoreNames.contains(n))d.createObjectStore(n,{keyPath:'id'})})};req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)})}
+async function all<T>(store:string){const db=await openDB();return new Promise<T[]>((resolve,reject)=>{const tx=db.transaction(store,'readonly');const r=tx.objectStore(store).getAll();r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}
+export async function cacheState(bookmarks:Bookmark[],settings:Settings){const db=await openDB();return new Promise<void>((resolve,reject)=>{const tx=db.transaction(['bookmarks','settings'],'readwrite');const b=tx.objectStore('bookmarks'),s=tx.objectStore('settings');b.clear();bookmarks.forEach(x=>b.put(x));s.clear();s.put({...settings,id:'current'});tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error)})}
+export async function loadCache(){const [bookmarks,settings]=await Promise.all([all<Bookmark>('bookmarks'),all<Settings & {id:string}>('settings')]);return {bookmarks:bookmarks.sort((a,b)=>a.position-b.position),settings:settings[0]}}
