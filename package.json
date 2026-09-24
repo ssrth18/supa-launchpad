@@ -11,10 +11,10 @@
   "dependencies": {
     "@vitejs/plugin-react": "latest",
     "lucide-react": "latest",
-    "vite": "latest",
-    "typescript": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "typescript": "^5.9.3",
+    "vite": "latest"
   },
   "devDependencies": {
     "@types/react": "^18.3.12",
